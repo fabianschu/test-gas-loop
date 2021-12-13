@@ -15,10 +15,14 @@ describe("Loop", function () {
 
   it("returns the missing address", async function () {
     const missingAddresses = await loopInstance.findMissing(
-      addresses.slice(0, -1)
+      addresses.slice(0, -2)
     );
-
-    expect(missingAddresses).to.eql([addresses[addresses.length - 1]]);
+    expect(missingAddresses).to.eql(
+      [
+        addresses[addresses.length - 1],
+        addresses[addresses.length - 2],
+      ].reverse()
+    );
   });
 
   it("cost little gas", async function () {

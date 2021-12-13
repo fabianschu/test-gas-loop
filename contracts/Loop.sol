@@ -21,6 +21,7 @@ contract Loop {
             for(uint8 j = 0; j < addresses.length; j++) {
                 if (vaultAddresses[i] == addresses[j]) {
                     isMissing = false;
+                    break;
                 }
             }
 
