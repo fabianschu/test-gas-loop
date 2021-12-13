@@ -3,8 +3,6 @@ pragma solidity ^0.8.0;
 
 import "./IVault.sol";
 
-import "hardhat/console.sol";
-
 contract Loop {
     IVault private _vault;
 
